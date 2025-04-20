@@ -9,3 +9,5 @@ Provide concrete examples or referenced files when helpful
 Avoid vague guidance. Write rules the way you would write a clear internal doc
 
 Reuse rules when you find yourself repeating prompts in chat
+
+This is before the revert
