@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Black', Arial, sans-serif;
+  background: #b5e16e;
+  overflow: hidden;
+}
+#background {
+  background: linear-gradient(to bottom, #b5e16e 0%, #5e8a3b 100%);
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+#main-menu {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 2;
+}
+.title {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 4px 4px 0 #000, 0 0 8px #000a;
+  letter-spacing: 2px;
+}
+.big-2 {
+  color: #fff;
+  font-size: 1.2em;
+  text-shadow: 4px 4px 0 #000, 0 0 8px #000a;
+}
+.subtitle {
+  font-size: 2.3em;
+  font-weight: bold;
+  color: #e51c23;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 0 #000, 0 0 8px #000a;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.menu button {
+  font-size: 1.5em;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  color: #222;
+  box-shadow: 2px 2px 0 #000, 0 0 8px #0003;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+.menu button:hover {
+  background: #e51c23;
+  color: #fff;
+  transform: scale(1.05);
+}
+#version {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: #fff;
+  font-size: 1.1em;
+  text-shadow: 2px 2px 0 #000;
+  z-index: 3;
+}

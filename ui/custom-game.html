@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Game Setup</title>
+  <link rel="stylesheet" href="custom-game.css" />
+</head>
+<body>
+  <div class="setup-container">
+    <div class="setup-title">Game Setup</div>
+    <div class="setup-content">
+      <div class="modes-panel">
+        <div class="modes-title">Modes</div>
+        <div class="modes-list">
+          <button class="mode selected">Last Man Standing</button>
+          <button class="mode">Last Team Standing</button>
+          <button class="mode">SURVIVAL</button>
+          <button class="mode">1 Hit 1 Kill</button>
+          <button class="mode">Gun Game</button>
+          <button class="mode">Gun Game REVERSED</button>
+        </div>
+      </div>
+      <div class="mode-details-panel">
+        <div class="mode-details-title">Last Man Standing</div>
+        <div class="mode-details-desc">Free for all. Last player alive wins.</div>
+        <div class="more-options-panel">
+          <div class="more-options-tab">
+            More options
+          </div>
+          <div class="options-row">
+            <div class="toggle-box" id="crate-toggle">
+              <img src="assets/crate.svg" class="icon crate" alt="Crate" />
+              <span class="toggle-label">Crates</span>
+              <img src="assets/check.svg" class="icon checkmark" alt="Enabled" />
+            </div>
+            <div class="toggle-box" id="pickup-toggle">
+              <img src="assets/heart.svg" class="icon heart" alt="Heart" />
+              <span class="toggle-label">Pickups</span>
+              <img src="assets/check.svg" class="icon checkmark" alt="Enabled" />
+            </div>
+          </div>
+          <div class="lives-row">
+            <span class="lives-label">Lives:</span>
+            <input class="lives-input" type="number" value="9" min="1" max="99" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="setup-footer">
+      <button class="back-btn">BACK to menu</button>
+      <button class="continue-btn">CONTINUE</button>
+    </div>
+  </div>
+  <script src="custom-game.js"></script>
+</body>
+</html>

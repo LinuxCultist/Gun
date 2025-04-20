@@ -10,4 +10,4 @@ Avoid vague guidance. Write rules the way you would write a clear internal doc
 
 Reuse rules when you find yourself repeating prompts in chat
 
-okay this is without the merge
+Read all the documents in memory-bank

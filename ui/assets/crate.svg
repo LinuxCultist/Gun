@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="64" height="64">
+  <g>
+    <!-- Main box -->
+    <rect x="12" y="24" width="56" height="40" rx="8" fill="#f9d06a" stroke="#b8860b" stroke-width="4"/>
+    <!-- Top lines -->
+    <rect x="12" y="24" width="56" height="10" rx="4" fill="#ffe9b0" stroke="#b8860b" stroke-width="2"/>
+    <!-- Side shading -->
+    <polygon points="68,24 68,64 60,72 60,34" fill="#e6b34a"/>
+    <polygon points="12,24 12,64 20,72 20,34" fill="#e6b34a"/>
+    <!-- X lines -->
+    <line x1="18" y1="30" x2="62" y2="58" stroke="#b8860b" stroke-width="3"/>
+    <line x1="62" y1="30" x2="18" y2="58" stroke="#b8860b" stroke-width="3"/>
+    <!-- Box shadow -->
+    <rect x="16" y="64" width="48" height="8" rx="4" fill="#b8860b" opacity="0.2"/>
+  </g>
+</svg>
