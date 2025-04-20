@@ -10,4 +10,4 @@ Avoid vague guidance. Write rules the way you would write a clear internal doc
 
 Reuse rules when you find yourself repeating prompts in chat
 
-This is before the revert
+okay this is without the merge
