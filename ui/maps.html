@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Map Selection</title>
+  <link rel="stylesheet" href="maps.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">Map Selection</div>
+    <div class="horizontal-map-container">
+      <div class="large-preview-panel">
+        <div class="large-map-frame">
+          <img id="large-map-img" src="assets/maps/jungle.png" alt="Map Preview" />
+        </div>
+        <div class="large-map-title" id="large-map-title">Jungle</div>
+      </div>
+      <div class="carousel-section">
+        <button class="carousel-arrow left" id="carousel-left">&#8592;</button>
+        <div class="carousel" id="map-carousel">
+          <!-- Thumbnails will be loaded here -->
+        </div>
+        <button class="carousel-arrow right" id="carousel-right">&#8594;</button>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="back-btn" id="back-main">BACK to menu</button>
+      <button class="continue-btn" id="continue-btn">CONTINUE</button>
+    </div>
+  </div>
+  <script src="maps.js"></script>
+</body>
+</html>

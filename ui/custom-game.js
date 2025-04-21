@@ -44,3 +44,7 @@ const backBtn = document.querySelector('.back-btn');
 if (backBtn) {
   backBtn.onclick = () => { window.location.href = 'index.html'; };
 }
+
+document.querySelector('.continue-btn').onclick = () => {
+  window.location.href = 'maps.html';
+};
