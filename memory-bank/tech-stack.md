@@ -1,4 +1,4 @@
-# Gun Mayhem 2: Base Remake - Tech Stack
+# Gun Mayhem 3: Base Remake - Tech Stack
 
 ## Game Engine
 - Godot Engine (recommended for 2D, open source)

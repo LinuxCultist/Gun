@@ -1,4 +1,4 @@
-# Main Menu UI for Gun Mayhem 2 (Base)
+# Main Menu UI for Gun Mayhem 3 (Base)
 
 - MainMenu.tscn: Godot scene for the main menu
 - MainMenu.gd: Script for menu button handling

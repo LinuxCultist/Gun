@@ -1,4 +1,4 @@
-# Gun Mayhem 2: Base Remake - Progress Tracker
+# Gun Mayhem 3: Base Remake - Progress Tracker
 
 ## Progress Bar
 

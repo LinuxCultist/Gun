@@ -1,4 +1,4 @@
-# Gun Mayhem 2: Base Remake - Game Design Document (Updated)
+# Gun Mayhem 3: Base Remake - Game Design Document (Updated)
 
 ## Overview
 A chaotic 2D arena shooter. Players shoot, jump, and try to knock each other off the map. The last player with remaining lives wins the round.
@@ -23,7 +23,7 @@ A chaotic 2D arena shooter. Players shoot, jump, and try to knock each other off
 - Player lives represented by icons or number
 - No damage meter, no health bar
 
-# Gun Mayhem 2 - Base Remake Plan (No Visible Damage)
+# Gun Mayhem 3 - Base Remake Plan (No Visible Damage)
 
 ## Phase 1: Player Movement
 

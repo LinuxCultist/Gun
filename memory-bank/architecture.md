@@ -1,4 +1,4 @@
-# Gun Mayhem 2: Base Remake - Architecture Overview
+# Gun Mayhem 3: Base Remake - Architecture Overview
 
 ## High-Level Structure
 

@@ -1,4 +1,4 @@
-# Gun Mayhem 2: Base Remake - Game Design Document
+# Gun Mayhem 3: Base Remake - Game Design Document
 
 ## Overview
 A chaotic 2D arena shooter for up to 4 local players. Players try to knock each other off platforms using weapons and physics-based knockback. The last player with remaining lives wins.
