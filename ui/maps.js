@@ -1,26 +1,26 @@
 // Example map data. Replace image filenames with your own map preview assets.
 const maps = [
-  { name: 'Jungle', img: 'assets/maps/jungle.png' },
-  { name: 'Ski Lift', img: 'assets/maps/skilift.png' },
-  { name: 'Space Station', img: 'assets/maps/spacestation.png' },
-  { name: 'Avalon', img: 'assets/maps/avalon.png' },
-  { name: 'Venice', img: 'assets/maps/venice.png' },
-  { name: 'Alien Planet', img: 'assets/maps/alienplanet.png' },
-  { name: 'Sub Base', img: 'assets/maps/subbase.png' },
-  { name: 'Highway', img: 'assets/maps/highway.png' },
-  { name: 'Castle', img: 'assets/maps/castle.png' },
-  { name: 'Safari Showdown', img: 'assets/maps/safari.png' },
-  { name: 'Grim City', img: 'assets/maps/grimcity.png' },
-  { name: 'Polar Pwn4ge', img: 'assets/maps/polar.png' },
-  { name: 'Midnight Wood', img: 'assets/maps/midnightwood.png' },
-  { name: 'Hovering Houses', img: 'assets/maps/hoveringhouses.png' },
-  { name: 'Desert Destruction', img: 'assets/maps/desert.png' },
-  { name: 'Mushroom Mountain', img: 'assets/maps/mushroom.png' },
-  { name: 'Great Wall Brawl', img: 'assets/maps/greatwall.png' },
-  { name: 'Solar Shootout', img: 'assets/maps/solar.png' },
-  { name: 'Underwater Slaughter', img: 'assets/maps/underwater.png' },
-  { name: 'Dessert Duel', img: 'assets/maps/dessert.png' },
-  { name: 'No Name', img: 'assets/maps/noname.png' }
+  { name: 'Jungle', color: '#4CAF50' },
+  { name: 'Ski Lift', color: '#03A9F4' },
+  { name: 'Space Station', color: '#8E24AA' },
+  { name: 'Avalon', color: '#FFEB3B' },
+  { name: 'Venice', color: '#2196F3' },
+  { name: 'Alien Planet', color: '#FF9800' },
+  { name: 'Sub Base', color: '#607D8B' },
+  { name: 'Highway', color: '#F44336' },
+  { name: 'Castle', color: '#795548' },
+  { name: 'Safari Showdown', color: '#E91E63' },
+  { name: 'Grim City', color: '#212121' },
+  { name: 'Polar Pwn4ge', color: '#FFFFFF' },
+  { name: 'Midnight Wood', color: '#388E3C' },
+  { name: 'Hovering Houses', color: '#009688' },
+  { name: 'Desert Destruction', color: '#FBC02D' },
+  { name: 'Mushroom Mountain', color: '#7B1FA2' },
+  { name: 'Great Wall Brawl', color: '#AFB42B' },
+  { name: 'Solar Shootout', color: '#FFD600' },
+  { name: 'Underwater Slaughter', color: '#00BCD4' },
+  { name: 'Dessert Duel', color: '#FFB74D' },
+  { name: 'No Name', color: '#BDBDBD' }
 ];
 
 const carouselElem = document.getElementById('map-carousel');
@@ -36,17 +36,18 @@ function renderCarousel() {
     const thumb = document.createElement('div');
     thumb.className = 'carousel-thumb' + (idx === selectedIdx ? ' selected' : '');
     thumb.tabIndex = 0;
-    const img = document.createElement('img');
-    img.src = map.img;
-    img.alt = map.name + ' Thumb';
-    img.className = 'carousel-thumb-img';
-    img.onerror = function() {
-      this.src = 'assets/maps/placeholder.png';
-    };
+    // Instead of image, use a colored div
+    const colorBox = document.createElement('div');
+    colorBox.className = 'carousel-thumb-color';
+    colorBox.style.background = map.color;
+    colorBox.style.width = '48px';
+    colorBox.style.height = '32px';
+    colorBox.style.borderRadius = '6px';
+    colorBox.style.margin = '0 auto 4px auto';
     const title = document.createElement('div');
     title.className = 'carousel-thumb-title';
     title.textContent = map.name;
-    thumb.appendChild(img);
+    thumb.appendChild(colorBox);
     thumb.appendChild(title);
     thumb.onmouseenter = () => selectMap(idx, false); // Pass false to indicate hover
     thumb.onclick = () => selectMap(idx, true); // Pass true to indicate click
@@ -57,13 +58,13 @@ function renderCarousel() {
 function selectMap(idx, doScroll = true) {
   selectedIdx = idx;
   renderCarousel();
-  largeMapImg.src = maps[idx].img;
-  largeMapImg.alt = maps[idx].name + ' Preview';
+  // Instead of image, set the background color of the preview panel
+  largeMapImg.style.display = 'none';
+  let previewPanel = document.querySelector('.large-map-frame');
+  previewPanel.style.background = maps[idx].color;
+  previewPanel.style.borderRadius = '8px';
+  previewPanel.style.border = '2px solid #222';
   largeMapTitle.textContent = maps[idx].name;
-  largeMapImg.onerror = function() {
-    this.src = 'assets/maps/placeholder.png';
-    this.alt = 'Preview Not Found';
-  };
   // Improved centering logic for the carousel
   if (doScroll) {
     const thumb = carouselElem.children[idx];
