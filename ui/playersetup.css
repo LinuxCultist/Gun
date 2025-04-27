@@ -1,0 +1,261 @@
+body {
+  background: #222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 10px; /* Add some padding for smaller screens */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.setup-container {
+  /* Use max-width and percentage for better responsiveness */
+  max-width: 780px;
+  width: 100%; /* Allow container to shrink */
+  margin: 30px auto;
+  background: #333;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #000a;
+  padding: 20px; /* Adjust padding */
+  box-sizing: border-box;
+}
+
+.setup-title {
+  color: #eee;
+  font-size: 2em; /* Slightly smaller title */
+  margin-bottom: 18px;
+  text-shadow: 1px 2px 0 #000;
+  text-align: center; /* Center title */
+}
+
+.player-slots {
+  display: flex;
+  /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
+  justify-content: center; /* Center slots when wrapped */
+  gap: 15px; /* Adjust gap */
+  margin-bottom: 18px;
+}
+
+.player-slot {
+  background: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0002;
+  /* Adjust width for 4 slots or wrapping */
+  width: calc(25% - 15px); /* Calculate width based on gap */
+  min-width: 160px; /* Minimum width before wrapping */
+  min-height: 390px; /* Increased min-height for taller canvas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 8px 10px 8px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.player-slot.empty {
+  background: #eee;
+  color: #b00;
+  justify-content: center;
+  align-items: center;
+  /* Ensure empty slots have same min-height */
+  min-height: 390px;
+}
+
+.clear-slot {
+  background: #eecaca;
+  border: 2px solid #c66;
+  color: #a22;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 2px 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 0.9em; /* Adjust font size */
+  width: 95%; /* Adjust width */
+  box-sizing: border-box;
+}
+
+.player-model {
+  /* Adjust height to fit the 80x100 canvas */
+  width: 90px;
+  height: 110px; /* Increased height */
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #ccc; /* Optional: visualize container */
+}
+
+.player-sprite {
+  /* Canvas element size */
+  width: 80px;
+  height: 100px; /* Match canvas attribute */
+  image-rendering: pixelated; /* Keep if desired */
+  display: block; /* Prevent extra space below canvas */
+}
+
+.player-options {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.option-btn {
+  background: #ddd;
+  border: 1.5px solid #888;
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-size: 0.9em; /* Adjust font size */
+  cursor: pointer;
+}
+
+.player-choices {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 8px;
+  gap: 4px; /* Add small gap */
+}
+
+.choice {
+  flex: 1;
+  background: #fff;
+  border: 1.5px solid #bbb;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.9em; /* Adjust font size */
+  font-weight: bold;
+  padding: 3px 0; /* Adjust padding */
+  min-width: 40px; /* Ensure minimum width */
+}
+
+.player-name {
+  width: 95%; /* Adjust width */
+  border-radius: 4px;
+  border: 1.5px solid #aaa;
+  font-size: 1em;
+  padding: 3px 6px; /* Adjust padding */
+  margin-top: 5px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.slot-empty {
+  color: #b00;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.select-type {
+  color: #222;
+  font-size: 0.95em;
+  margin-bottom: 7px;
+  text-align: center;
+}
+
+.type-btn {
+  background: #f8f8f8;
+  border: 1.5px solid #aaa;
+  border-radius: 4px;
+  padding: 3px 0; /* Adjust padding */
+  width: 90%;
+  margin-bottom: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.setup-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align buttons vertically */
+  margin-top: 28px; /* Increased margin for more space */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 18px; /* More gap between buttons */
+}
+
+.back-btn,
+.start-btn {
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 7px;
+  font-size: 1em; /* Slightly smaller font */
+  padding: 7px 18px; /* Smaller padding */
+  box-shadow: 0 2px 5px #0004;
+  cursor: pointer;
+  letter-spacing: 1px;
+  flex-grow: 1; /* Allow buttons to grow */
+  text-align: center;
+  min-width: 90px;
+  transition: background 0.13s, box-shadow 0.13s, transform 0.1s;
+  outline: none;
+}
+
+.back-btn {
+  background: #b22;
+}
+.back-btn:hover, .back-btn:focus {
+  background: #911;
+  box-shadow: 0 4px 10px #0005;
+  transform: translateY(1px) scale(0.98);
+}
+.back-btn:active {
+  background: #800;
+  transform: translateY(2px) scale(0.96);
+}
+
+.start-btn {
+  background: #3cc23c;
+}
+.start-btn:hover, .start-btn:focus {
+  background: #259d25;
+  box-shadow: 0 4px 10px #0005;
+  transform: translateY(1px) scale(0.98);
+}
+.start-btn:active {
+  background: #217821;
+  transform: translateY(2px) scale(0.96);
+}
+
+@media (max-width: 700px) {
+  .player-slot {
+    /* Adjust width for 2 columns on smaller screens */
+    width: calc(50% - 10px);
+    min-width: 150px;
+  }
+  .setup-title {
+    font-size: 1.8em;
+  }
+  .setup-footer {
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .back-btn, .start-btn {
+    font-size: 0.95em;
+    padding: 7px 10px;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 400px) {
+  .player-slot {
+    /* Full width on very small screens */
+    width: 90%;
+    min-width: unset;
+  }
+  .setup-container {
+    padding: 15px;
+  }
+  .setup-footer {
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .back-btn, .start-btn {
+    font-size: 0.9em;
+    padding: 6px 5px;
+    min-width: 60px;
+  }
+}

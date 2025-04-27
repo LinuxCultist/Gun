@@ -90,9 +90,14 @@ document.getElementById('carousel-right').onclick = () => {
 document.getElementById('back-main').onclick = () => {
   window.location.href = 'custom-game.html';
 };
-document.getElementById('continue-btn').onclick = () => {
-  window.location.href = 'character-select.html';
-};
+
+// Add event listener for CONTINUE button to go to player setup
+const continueBtn = document.getElementById('continue-btn');
+if (continueBtn) {
+  continueBtn.onclick = function() {
+    window.location.href = 'playersetup.html';
+  };
+}
 
 // Initial render
 renderCarousel();

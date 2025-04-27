@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Player Setup</title>
+  <link rel="stylesheet" href="playersetup.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="setup-container">
+    <h1 class="setup-title">Player Setup</h1>
+    <div class="player-slots">
+      <div class="player-slot">
+        <button class="clear-slot">CLEAR SLOT</button>
+        <div class="player-model">
+          <canvas id="player-canvas" width="80" height="100" class="player-sprite"></canvas>
+        </div>
+        <div class="player-options">
+          <button class="option-btn">HAT</button>
+          <button class="option-btn">FACE</button>
+          <button class="option-btn">SHIRT</button>
+        </div>
+        <div class="player-choices">
+          <div class="choice color-choice">COLOR</div>
+          <div class="choice gun-choice">GUN</div>
+          <div class="choice perk-choice">PERK</div>
+        </div>
+        <input type="text" class="player-name" placeholder="name:" value="">
+      </div>
+      <div class="player-slot empty">
+        <div class="slot-empty">SLOT EMPTY</div>
+        <div class="select-type">SELECT A PLAYER TYPE</div>
+        <button class="type-btn">HUMAN PLAYER</button>
+        <button class="type-btn">AI PLAYER</button>
+      </div>
+      <div class="player-slot empty">
+        <div class="slot-empty">SLOT EMPTY</div>
+        <div class="select-type">SELECT A PLAYER TYPE</div>
+        <button class="type-btn">HUMAN PLAYER</button>
+        <button class="type-btn">AI PLAYER</button>
+      </div>
+      <div class="player-slot empty">
+        <div class="slot-empty">SLOT EMPTY</div>
+        <div class="select-type">SELECT A PLAYER TYPE</div>
+        <button class="type-btn">HUMAN PLAYER</button>
+        <button class="type-btn">AI PLAYER</button>
+      </div>
+    </div>
+    <div class="setup-footer">
+      <button class="back-btn">BACK</button>
+      <button class="start-btn">START!</button>
+    </div>
+  </div>
+  <script src="playersetup.js"></script>
+</body>
+</html>
