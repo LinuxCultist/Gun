@@ -48,13 +48,13 @@ function renderCarousel() {
     title.textContent = map.name;
     thumb.appendChild(img);
     thumb.appendChild(title);
-    thumb.onmouseenter = () => selectMap(idx);
-    thumb.onclick = () => selectMap(idx);
+    thumb.onmouseenter = () => selectMap(idx, false); // Pass false to indicate hover
+    thumb.onclick = () => selectMap(idx, true); // Pass true to indicate click
     carouselElem.appendChild(thumb);
   });
 }
 
-function selectMap(idx) {
+function selectMap(idx, doScroll = true) {
   selectedIdx = idx;
   renderCarousel();
   largeMapImg.src = maps[idx].img;
@@ -64,10 +64,17 @@ function selectMap(idx) {
     this.src = 'assets/maps/placeholder.png';
     this.alt = 'Preview Not Found';
   };
-  // Only scroll if needed, and use instant scroll to avoid animation 'shake'
-  const thumb = carouselElem.children[idx];
-  if (thumb && (thumb.offsetLeft < carouselElem.scrollLeft || (thumb.offsetLeft + thumb.offsetWidth) > (carouselElem.scrollLeft + carouselElem.offsetWidth))) {
-    thumb.scrollIntoView({ behavior: 'auto', inline: 'center', block: 'nearest' });
+  // Improved centering logic for the carousel
+  if (doScroll) {
+    const thumb = carouselElem.children[idx];
+    if (thumb) {
+      // Center the selected thumb in the visible area of the carousel
+      const carouselWidth = carouselElem.clientWidth;
+      const thumbLeft = thumb.offsetLeft;
+      const thumbWidth = thumb.offsetWidth;
+      const scrollTo = thumbLeft - (carouselWidth / 2) + (thumbWidth / 2);
+      carouselElem.scrollTo({ left: scrollTo, behavior: 'auto' });
+    }
   }
 }
 
@@ -80,7 +87,7 @@ document.getElementById('carousel-right').onclick = () => {
   selectMap(selectedIdx);
 };
 document.getElementById('back-main').onclick = () => {
-  window.location.href = 'index.html';
+  window.location.href = 'custom-game.html';
 };
 document.getElementById('continue-btn').onclick = () => {
   window.location.href = 'character-select.html';
