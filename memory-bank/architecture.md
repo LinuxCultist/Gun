@@ -13,13 +13,13 @@
 ## Key Components
 
 - **Input Handler**: Maps keyboard/controller input to player actions.
-- **Physics Engine**: (Godot built-in) Manages movement, collisions, knockback.
+- **Physics Engine**: (Phaser built-in) Manages movement, collisions, knockback.
 - **UI Layer**: Displays player lives, winner announcement.
 
-## File/Folder Structure (Godot Example)
+## File/Folder Structure (Phaser Example)
 
 - `/scenes/` — Main scene, player, platform, projectile scenes
-- `/scripts/` — Player.gd, Projectile.gd, GameManager.gd, InputHandler.gd
+- `/scripts/` — Player.js, Projectile.js, GameManager.js, InputHandler.js
 - `/assets/` — Sprites, sounds
 - `/ui/` — UI scenes and scripts
 
